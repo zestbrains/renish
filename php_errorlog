@@ -1,0 +1,2 @@
+[12-Mar-2017 07:14:21 CST6CDT] PHP Fatal error:  Class 'MY_Model' not found in /home/sureforl/public_html/application/models/admin/Admin.php on line 4
+[19-Mar-2017 02:56:50 CST6CDT] PHP Parse error:  syntax error, unexpected 'public' (T_PUBLIC), expecting end of file in /home/sureforl/public_html/testmail.php on line 15
