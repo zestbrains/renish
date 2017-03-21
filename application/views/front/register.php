@@ -61,11 +61,13 @@
           <div class="col-xs-12 col-sm-6 col-md-6">
             <div class="form-group">
               <input type="password" name="vPassword" id="vPassword" class="form-control input-lg" placeholder="Password" tabindex="5">
+               <a href="javascript:void(0);" id="password_main_show" >Show</a>  
             </div>
           </div>
           <div class="col-xs-12 col-sm-6 col-md-6">
             <div class="form-group">
               <input type="password" name="vPassword_confirm" id="vPassword_confirm" class="form-control input-lg" placeholder="Confirm Password" tabindex="6">
+               <a href="javascript:void(0);" id="password_confirm_show" >Show</a>  
             </div>
           </div>
           <div class="col-xs-12 col-sm-12 col-md-12">
@@ -120,6 +122,27 @@
 <!--- END ------>
 <script>
      $(document).ready(function () {
+         //main password
+          $("#password_main_show").click(function(){
+                if($("#password_main_show").text()=='Show'){
+                    $("#vPassword").attr('type','text');                
+                    $("#password_main_show").text('Hide');
+                }else{
+                    $("#vPassword").attr('type','password');
+                    $("#password_main_show").text('Show');
+                }
+         });
+        //confirm password
+        $("#password_confirm_show").click(function(){
+                if($("#password_confirm_show").text()=='Show'){
+                    $("#vPassword_confirm").attr('type','text');                
+                    $("#password_confirm_show").text('Hide');
+                }else{
+                    $("#vPassword_confirm").attr('type','password');
+                    $("#password_confirm_show").text('Show');
+                }
+         });
+        
          $("#close_modal").click(function(){
              var redirect_url='<?php echo DOMAIN_URL.'/'.$last_page; ?>';  
              window.location.href=redirect_url;

@@ -10,11 +10,11 @@
     <!----------------------------------------------------- first Step ------------------------------------------------------>     
     <div class="container" id="first_step">
        <div class="row about_container stepgrey">
-       <h1 class="about-text difreg">Tell Us Your expertise or shop type ? </h1>
+       <h1 class="about-text difreg">What is your shop type? </h1>
           <div class="col-lg-6 garage-left">
           <div class="fstradio">
-             <label class="radio-inline"><input type="radio" value="1" id="vGarageType" class="vGarageType" name="vGarageType" <?php echo ((isset($GarageData['vGarageType']) !='' && $GarageData['vGarageType']==2) ? 'checked="checked"' : ''); ?> >Repair Shop</label><br>
-             <label class="radio-inline"><input type="radio" value="2" id="vGarageType" class="vGarageType" name="vGarageType" <?php echo ((isset($GarageData['vGarageType']) !='' && $GarageData['vGarageType']==1) ? 'checked="checked"' : ''); ?> >Body Shop</label><br>                       
+             <label class="radio-inline"><input type="radio" value="1" id="vGarageType" class="vGarageType" name="vGarageType" <?php echo ((isset($GarageData['vGarageType']) !='' && $GarageData['vGarageType']==2) ? 'checked="checked"' : ''); ?> >Auto Repair Shop</label><br>
+             <label class="radio-inline"><input type="radio" value="2" id="vGarageType" class="vGarageType" name="vGarageType" <?php echo ((isset($GarageData['vGarageType']) !='' && $GarageData['vGarageType']==1) ? 'checked="checked"' : ''); ?> >Auto Body Shop</label><br>                       
              <label class="radio-inline"><input type="radio" value="3" id="vGarageType" class="vGarageType" name="vGarageType" <?php echo ((isset($GarageData['vGarageType']) !='' && $GarageData['vGarageType']==3) ? 'checked="checked"' : ''); ?> >Both</label></div>
           </div>
           <div class="col-lg-6">
@@ -42,7 +42,7 @@
                     </div>
                     
                     <div class="form-group">
-                        <label for="inputdefault"  class="profile-field-label">State Of USA<span class="mendatory_mark">*</span></label>
+                        <label for="inputdefault"  class="profile-field-label">State<span class="mendatory_mark">*</span></label>
                          <?php
 
                          ?>
@@ -88,7 +88,7 @@
      
      <div class="third-step-garage stepgrey">
      <div class="tstep-parent">
- <h1 class="about-text difreg">Customer want more details for find your shop.</h1>
+ <h1 class="about-text difreg">More details for your shop.</h1>
        <div class="row">
             <div class="col-lg-6">
                         <div class="form-group">
@@ -221,7 +221,7 @@
      <div class="container" id="fifth_step" style="display:none;" >
    
        <div class="row fifth-step-garage stepgrey">
-  <h1 class="about-text difreg">Your shop banner ,it will help you to attract more customers</h1>
+  <h1 class="about-text difreg">Professional banner will help your business attract more customers.</h1>
             <div class="col-lg-12">
                         <div class="form-group cover-image">
                           <label for="inputdefault" class="profile-field-label">Cover Photo<span class="mendatory_mark">*</span></label>
@@ -666,7 +666,7 @@ $(function(){
 
                            reader.readAsDataURL(input.files[0]);
                      }else{
-                         $("#error_message").append('Invalid Image!');
+                         $("#error_message").html('Invalid Image!');
                      }      
 
            }

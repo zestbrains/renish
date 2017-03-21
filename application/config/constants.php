@@ -92,7 +92,7 @@ define('_URL', substr($_SERVER['PHP_SELF'], 0, - (strlen($_SERVER['SCRIPT_FILENA
 define('SITE_PATH', _PATH . "/");
 define('SITE_URL', _URL . "/");
 
-define('DOMAIN_URL', 'http://' . $_SERVER['HTTP_HOST']);
+define('DOMAIN_URL', 'http://' . $_SERVER['HTTP_HOST'].'/renish');
 //user defined constant
 //Front End
 
@@ -145,10 +145,10 @@ define('DEFAULT_COUNTRY',254);
 /*------ Registration Heading constant ---- */
  //shop heading
 define('SHOP_HEADING', 'Register Your Shop Here');
-define('SHOP_SEMI_HEADING', 'Grow Your business by providing awesome discount.');
+define('SHOP_SEMI_HEADING', 'Win business by giving discount and earning great reviews.');
  //Vehicle heading
 define('VEHICLE_HEADING', 'Register Here');
-define('VEHICLE_SEMI_HEADING', 'Surf Unlimited and good discounts of various ethical shops.');
+define('VEHICLE_SEMI_HEADING', 'Get discount and give reviews.');
 
 //user type
 define('SHOP_OWNER', 'shop_owner');

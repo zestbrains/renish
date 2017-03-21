@@ -76,8 +76,8 @@ $query_builder = TRUE;
 $db['default'] = array(
 	'dsn' => 'mysql:host=localhost;dbname=sureforl_repair_surity',
 	'hostname' => 'localhost',
-	'username' => 'sureforl_less',
-	'password' => 'sureforless@123',
+	'username' => 'root',
+	'password' => '',
 	'database' => 'repairsu_repair_surity',
 	'dbdriver' => 'pdo',
 	'dbprefix' => '',

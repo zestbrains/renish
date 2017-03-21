@@ -28,8 +28,8 @@
 
         <div class="form-group">
 
-          <input type="password" name="password" id="email" class="form-control input-lg" placeholder="Password" tabindex="4">
-
+          <input type="password" name="password" id="password" class="form-control input-lg" placeholder="Password" tabindex="4">
+          <a href="javascript:void(0);" id="password_show" >Show</a>  
         </div>
 
         <div class="form-group">
@@ -54,7 +54,7 @@
 
       </form>
 
-      <div class="logcontone">Search our networks of many shops.</div>
+     
 
     </div>
 
@@ -76,7 +76,7 @@
 
       </div>
 
-      <div class="logconttwo">View a map of local shops.</div>
+      
 
     </div>
 
@@ -90,9 +90,17 @@
 
 <script>
 
-         $(document).ready(function () {
+$(document).ready(function () {
 
-
+        $("#password_show").click(function(){
+            if($("#password_show").text()=='Show'){
+                $("#password").attr('type','text');
+                $("#password_show").text('Hide');
+            }else{
+                $("#password").attr('type','password');
+                $("#password_show").text('Show');
+            }
+        });
 
         $("#LoginForm").validate({
 
