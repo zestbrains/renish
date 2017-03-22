@@ -34,7 +34,7 @@
     <!-- --------------------------------------------------second step------------------------------------------------------>
     <div class="container" id="second_step" style="display:none;">
        <div class="row about_container stepgrey">
-       <h1 class="about-text difreg">Your shop name or location details</h1>
+       <h1 class="about-text difreg">Your shop location details</h1>
            <div class="col-lg-6 garage-left">
                     <div class="form-group">
                       <label for="inputdefault" class="profile-field-label">Name of Repair Shop<span class="mendatory_mark">*</span></label>
@@ -58,8 +58,8 @@
                     </div>
                
                     
-                    <div class="form-group">
-                          <label for="inputdefault"  class="profile-field-label">Zipcode<span class="mendatory_mark">*</span></label>
+                        <div class="form-group">
+                          <label for="inputdefault"  class="profile-field-label">Zip Code<span class="mendatory_mark">*</span></label>
                            <input type="text" name="vZipCode" id="vZipCode" class="form-control input-sm profile-field" placeholder="zipcode" tabindex="4" value="<?php echo (isset($GarageData['vZipCode']) !='' ? $GarageData['vZipCode'] : ''); ?>" >
                         </div>
            </div>
@@ -92,16 +92,16 @@
        <div class="row">
             <div class="col-lg-6">
                         <div class="form-group">
-                           <label for="inputdefault"  class="profile-field-label">Mobile No<span class="mendatory_mark">*</span></label>
-                           <input type="text" name="vMobile" id="vMobile" class="form-control "  placeholder="mobile number" tabindex="1" value="<?php echo (isset($GarageData['vMobile']) !='' ? $GarageData['vMobile'] : ''); ?>" >
+                           <label for="inputdefault"  class="profile-field-label">Mobile Number<span class="mendatory_mark">*</span></label>
+                           <input type="text" name="vMobile" id="vMobile" class="form-control "  placeholder="Mobile Number" tabindex="1" value="<?php echo (isset($GarageData['vMobile']) !='' ? $GarageData['vMobile'] : ''); ?>" >
                            <div id="mobile_num" style="color:red;"></div>
                            
                         </div>
             </div>
             <div class="col-lg-6">
                         <div class="form-group">
-                           <label for="inputdefault"  class="profile-field-label">Office number<span class="mendatory_mark">*</span></label>
-                           <input type="text" name="vOffice_mobile" id="vOffice_mobile" class="form-control " placeholder="office number" tabindex="2" value="<?php echo (isset($GarageData['vOffice_mobile']) !='' ? $GarageData['vOffice_mobile'] : ''); ?>" >
+                           <label for="inputdefault"  class="profile-field-label">Office Number<span class="mendatory_mark">*</span></label>
+                           <input type="text" name="vOffice_mobile" id="vOffice_mobile" class="form-control " placeholder="Office Number" tabindex="2" value="<?php echo (isset($GarageData['vOffice_mobile']) !='' ? $GarageData['vOffice_mobile'] : ''); ?>" >
                            <div id="ofc_num" style="color:red;"></div>
                         </div>
              </div>
@@ -151,7 +151,7 @@
     <div class="container" id="fourth_step"  style="display:none;"  >
 
        <div class="row about_container stepgrey">
-     <h1 class="about-text difreg">When will you available for work ?</h1>
+     <h1 class="about-text difreg">Your shop hours</h1>
           <div class="col-lg-6 garage-left">
                <div class="col-lg-12 days">
                           
@@ -272,7 +272,7 @@
      <div class="container" id="six_step" style="display:none;"  >
 
             <div class="row about_container stepgrey">
-                 <h1 class="about-text difreg">Have more images ? than please provide us.</h1>
+                 <h1 class="about-text difreg">More images is even better.</h1>
 				 <div class="col-lg-12 add_more_div">
 				 <a id="add_more" href="#" class="add-more-btn-services"><i class="fa fa-photo"></i> Add More Photos</a>
 				 </div>
@@ -327,14 +327,14 @@
     <div class="container" id="seventh_step" style="display:none;" >
 
        <div class="row about_container stepgrey">
-         <h1 class="about-text difreg">Want to grow business? provide a good discount to customers</h1>
+         <h1 class="about-text difreg">Better discount will help attract more business</h1>
           <div class="col-lg-12 seventh-step-garage">
                 <div class="panel-heading profile-small-title">
-                  <h3>Coupon Code<span class="mendatory_mark">*</span></h3>
+<!--                  <h3>Coupon Code<span class="mendatory_mark">*</span></h3>-->
                 </div>
                 <div class="panel-body">
                   <div class="checkbox">
-                    <input type="checkbox" value="" id="coupon"   class="work-checkbox" checked>
+<!--                    <input type="checkbox" value="" id="coupon"   class="work-checkbox" checked>-->
                       <label>I love to attract customers with offer of
                         <select id="vCouponDiscount" name="vCouponDiscount" class="form-control2" style="border: none;border-bottom: 2px solid #CCC;" >
                              <?php foreach ($discouts as $discount) {$selected = ($GarageData['vCouponDiscount'] != '' ? ($discount['iDiscountId'] == $GarageData['vCouponDiscount']) ? 'selected="selected"' : '' : '');?>

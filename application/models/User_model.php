@@ -49,6 +49,7 @@ class User_model extends Common_model
                     'USERID' => $row->iUserId,
                     'USEREMAIL' => $row->vEmail,
                     'USERNAME' => $row->vName,
+                    'ZIPCODE' => $row->vPinCode,
                     'USER_TYPE' =>$row->eUserRole, 
                     'USERWALLET' =>$row->iWalletMoney, 
                     'USERIMAGE' =>DOMAIN_URL.$row->vProfileImage

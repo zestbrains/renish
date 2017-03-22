@@ -98,7 +98,7 @@ class User extends Front_Controller_without_login {
                             }else{
                                 $postData['eStatus']=ACTIVE_STATUS;                                
                             }                           
-                                
+                             
                             $res = $this->User->insertRow($postData);                               
                           
                            if ($res>0) { 
@@ -106,10 +106,12 @@ class User extends Front_Controller_without_login {
                                           'USERID' => $res,
                                           'USEREMAIL' => $postData['vEmail'],
                                           'USERNAME' =>$postData['vName'],
+                                          'ZIPCODE' =>$postData['vPinCode'],
                                           'USER_TYPE' =>$postData['eUserRole'],                                                                        
                                            'USERWALLET' =>0,
                                           'USERIMAGE' =>DOMAIN_URL.USER_DP_URL.PROFILE_DP
                                 );
+                               
                                 if($postData['eUserRole']==SHOP_OWNER){
                                       $redirect_mail_url= DOMAIN_URL.'/'.'user/redirect_to_varify?vActivationToken='.$postData['vActivationToken'];
                 

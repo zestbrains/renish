@@ -29,6 +29,8 @@ class Shop extends Front_Controller_without_login {
                 $this->viewData['states'] = $this->Setting->get_States($GarageData['iCountryId']);
 
                 $this->viewData['cities'] = $this->Setting->get_Cities($GarageData['iStateId']);
+            }else{
+                $GarageData['vZipCode']=$_SESSION['ZIPCODE'];
             }
             $this->viewData['discouts'] = $this->Setting->get_Discount();
 

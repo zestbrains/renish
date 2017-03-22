@@ -67,11 +67,11 @@
     </script>
     <?php }?>
     <!-- FACEBOOK LIKE -->
-       <div id="page-loader">
+<!--       <div id="page-loader">
          <div class="page-loader-inner"> 
              <span class="loader-figure"></span> 
              <img class="loader-logo" src="<?php echo ASSETS_URL; ?>/uploads/favicon.png" srcset="<?php echo ASSETS_URL; ?>/uploads/favicon.png 1x, <?php echo ASSETS_URL; ?>/uploads/favicon@2x.png 2x" alt="Loader Logo">         </div>
-      </div>
+      </div>-->
       <div id="page-content">
         <?php
        
