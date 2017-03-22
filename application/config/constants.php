@@ -92,7 +92,7 @@ define('_URL', substr($_SERVER['PHP_SELF'], 0, - (strlen($_SERVER['SCRIPT_FILENA
 define('SITE_PATH', _PATH . "/");
 define('SITE_URL', _URL . "/");
 
-define('DOMAIN_URL', 'http://' . $_SERVER['HTTP_HOST'].'/renish');
+define('DOMAIN_URL', 'http://' . $_SERVER['HTTP_HOST'].'/sureorless');
 //user defined constant
 //Front End
 

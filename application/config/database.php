@@ -74,11 +74,11 @@ $active_group = 'default';
 $query_builder = TRUE;
 
 $db['default'] = array(
-	'dsn' => 'mysql:host=localhost;dbname=sureforl_repair_surity',
+	'dsn' => 'mysql:host=localhost;dbname=repair_surity',
 	'hostname' => 'localhost',
 	'username' => 'root',
 	'password' => '',
-	'database' => 'repairsu_repair_surity',
+	'database' => 'repair_surity',
 	'dbdriver' => 'pdo',
 	'dbprefix' => '',
 	'pconnect' => FALSE,

@@ -193,7 +193,7 @@
                 },
                 vPassword_confirm: {
                     required: "Password is required",
-                    equalTo: "Password and confirm password should be same" // <-- removed underscore
+                    equalTo: "Password don't match" // <-- removed underscore
                 }
             },
             submitHandler: function (form) { 

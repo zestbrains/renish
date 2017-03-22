@@ -60,16 +60,17 @@
                   <div class="col-lg-12 video-home-section">
                     <iframe width="1000" height="500" src="https://www.youtube.com/embed/wZTxNIIS6II" frameborder="0" allowfullscreen></iframe>
 <div class="hm-socialactions">
+<!-- 
           	<ul>
             	<li>
-                <!-- <input type="button" value="Facebook"> -->
+                <input type="button" value="Facebook">
                 <div class="fb-like" data-href="https://www.facebook.com/Repair-Test-1364123826941833/" data-layout="button_count" data-action="like" data-size="large" data-show-faces="false" data-share="false"></div>
               </li>
                 <li>
-                  <!-- <input type="button" value="Twitter"> -->
+                  <input type="button" value="Twitter"> 
                   <a data-size="large" data-show-screen-name="false" data-show-count="false" class="twitter-follow-button" href="https://twitter.com/repairtest002">Follow</a>
                 </li>
-            </ul> 
+            </ul>  -->
           </div> 
                     </div>
                      </div>

@@ -7302,7 +7302,7 @@ ul#listing h2.garage-name {
 	margin: auto;
 	display: block;
 	text-align: left;
-	width: 160px;
+	width: 300px;
 	transform: translateY(-50%);
 }
 .fstradio .radio-inline {
@@ -7490,3 +7490,16 @@ img.homapimgg {
 	overflow: auto;
 }
 /*GG-20-3-17-END*/
+/*GG-21-3-17*/
+#LoginForm .form-group, #registrationForm .form-group{
+	position: relative;
+}
+#LoginForm .form-group #password_show, #registrationForm .form-group #password_main_show, #registrationForm .form-group #password_confirm_show{
+	position: absolute;
+	right: 15px;
+	top: 8px;
+}
+#registrationForm .form-group #password_main_show, #registrationForm .form-group #password_confirm_show{
+	font-size:12px;
+	}
+/*GG-21-3-17-END*/
