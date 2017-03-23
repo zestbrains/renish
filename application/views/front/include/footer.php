@@ -5,7 +5,7 @@
                      <div class="widget">
                         <img src="<?php echo ASSETS_URL; ?>/uploads/coin_logo.png" alt="Logo">
                         <div class="spacer-mini"></div>
-                        <p>Surety means confidence to customers shopping for automobile repair services. Accountability is assured by not-public reviews and ratings on our site.  </p>
+                        <p>Surety means confidence to customers of auto shop. Accountability is assured by not-public reviews and ratings on our site.  </p>
                      </div>
                      <div class="widget social-links">
                         <ul class="socialmedia-widget style-rounded hover-slide-3">

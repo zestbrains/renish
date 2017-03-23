@@ -30,12 +30,12 @@
                                  <div class="panel-body">
                                     <div class="col-lg-6 order-amounts">
                                        <h3>Order Amount:</h3>
-                                       <h4> <?php echo $totalOrder ? $totalOrder : '0.00' ; ?>$</h4>
+                                       <h4> $<?php echo $totalOrder ? $totalOrder : '0.00' ; ?></h4>
                                     </div>
                                    
                                     <div class="col-lg-6 order-amounts">
                                        <h3>Total Refund:</h3>
-                                       <h4><?php echo $totalRefund ? $totalRefund.'.00' : '0.00' ; ?>$</h4>
+                                       <h4>$<?php echo $totalRefund ? $totalRefund.'.00' : '0.00' ; ?></h4>
                                     </div>
                                  </div>
                               </div>

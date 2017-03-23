@@ -1880,7 +1880,7 @@ header.header-transparent.transparent-light:not(.mega-hover) {
 }
 header.header-transparent.transparent-light:not(.mega-hover) nav#main-nav > ul > li > a {
 	color: #333;
-	font-size: 12px !important;
+	font-size: 13px !important;
 	font-weight: 700 !important;
 	text-transform: uppercase !important;
 	padding: 0 16px !important;

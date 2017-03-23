@@ -154,9 +154,9 @@ header #logo {
 	position: absolute;
 	left: 0;
 	top: 52%;
-	-webkit-transform: translate(0, -25%);
-	-ms-transform: translate(0, -25%);
-	transform: translate(0, -25%);
+	-webkit-transform: translate(0, -5%);
+	-ms-transform: translate(0, -5%);
+	transform: translate(0, -5%);
 	margin-top: 0;
 	padding: 0;
 }
@@ -406,10 +406,12 @@ nav#main-nav ul li > ul.submenu {
 	margin-top: 10px !important;
 }
 .profile-title h3 {
-	font-size: 18px;
-	line-height: 8px !important;
-	padding: 0px !important;
-	margin-top: 10px !important;
+	    font-size: 18px;
+    font-weight: 400 !important;
+    color: rgba(18, 18, 19, 0.69);
+    text-transform: capitalize;
+    line-height: 8px !important;
+    padding: 0px !important;
 }
 .profile-picture {
 	margin-bottom: 18px;
@@ -429,9 +431,12 @@ nav#main-nav ul li > ul.submenu {
 .profile-body {
 	padding: 0px !important;
 }
-.edit-profile-btn {
-	text-align: center;
+.edit-profile-btn a{
 	margin-bottom: 3px;
+	width: 150px;
+    background-color: #b5893c;
+    color: white;
+	text-transform: uppercase;
 }
 .panel-default>.panel-heading {
 	background-color: rgba(245, 245, 245, 0.12) !important;
@@ -1424,8 +1429,9 @@ header .header-inner {
 }
 .searchbox-inside h4 {
 	color: white;
-	font-size: 29px;
+	font-size: 24px;
 	padding-bottom: 12px;
+	text-align:center;
 }
 .success_alert_bar {
 	background-color: rgb(141, 202, 70) !important;
@@ -1472,11 +1478,11 @@ header .header-inner {
 #show-search i {
 	font-size: 20px !important;
 	font-weight: bold !important;
-	color: #FF5722 !important;
+	color: #4CAF50 !important;
 }
 #show-search i span {
 	font-weight: bold !important;
-	color: #FF5722 !important;
+	color: #4CAF50 !important;
 }
 footer .copyright {
 	padding: 5px 0 !important;
@@ -2188,4 +2194,9 @@ nav#main-nav > ul > li.navlogo::after {
 }
 .seventh-step-garage .btn-garage #save_shop {
 	float: right;
+}
+/*MP 23-03-2017*/
+.btn-default:hover {
+    color: #fff !important;
+    background-color: #b5893c !important;
 }

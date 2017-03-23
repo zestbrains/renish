@@ -13,18 +13,15 @@ $lname=$explodeName[1];
                         <div class="col-lg-3 profile-sidebar">
                                 <div class="panel panel-default">
                                   <div class="panel-heading profile-title">
-                                        <h3 style="margin-top: 10px !important;"><?php echo ($UserData['vName'] !='' ? $UserData['vName'] : ''); ?></h3>
+                                        <h3><?php echo ($UserData['vName'] !='' ? $UserData['vName'] : ''); ?></h3>
                                   </div>
                                   <div class="panel-body profile-body"><img src="<?php echo ($UserData['vProfileImage'] !='' ? DOMAIN_URL.$UserData['vProfileImage'] : ''); ?>" class="img-responsive profile-picture" id="preview_profile_pic"/>
 
                                         <p><i class="fa fa-user"></i> You since: <?php echo ($UserData['dCreatedDate'] !='' ? date('d M Y', strtotime($UserData['dCreatedDate'])) : ''); ?></p>
                                         <p><i class="fa fa-user"></i> Last modified: <?php echo ($UserData['dModifyDate'] !='' ? date('d M Y', strtotime($UserData['dModifyDate'])) : ''); ?></p>
-                                        <p><a href="<?php echo DOMAIN_URL; ?>/shop/create" class=""><i class="fa fa-plus-circle"></i> Add Repair Shop</a></p>
+                                        <p style="display:none;"><a href="<?php echo DOMAIN_URL; ?>/shop/create" class=""><i class="fa fa-plus-circle"></i> Add Repair Shop</a></p>
                                         
-                                        <div class="edit-profile-btn">
-                                            <a id="updateData" href="javascript:void(0);" class="sr-button button-1 button-icon-text button-mini rounded"><i class="fa fa-save"></i>Update Password</a>
-                                           
-                                        </div> 
+ 
                                   </div>
                                 </div>
 
@@ -67,7 +64,12 @@ $lname=$explodeName[1];
                                                                 <input type="password" name="vConfirmPassword" id="vConfirmPassword" class="form-control input-sm profile-field" placeholder="Confirm Password" tabindex="2"  value="">
                                                         </div>
                                                 </div>
-                                                
+                                                <div class="col-lg-10">  
+                                                  <div class="edit-profile-btn">
+                                                    <a id="updateData" href="javascript:void(0);" class="btn btn-default">SAVE PASSWORD</a>
+                                                </div>
+                                           
+                                        </div>
 
                                         </div>
                                         

@@ -25,7 +25,7 @@
                                <div class="input-group">
                                    <input type="text" data-error-container="#msgspan" class="form-control zip-input" name="search" placeholder="Zip Code" required maxlength="5">                                  
                                   <span class="input-group-btn">
-                                      <input type="submit" class="btn btn-secondary zipbtn" value="SEARCH">                                      
+                                      <input type="submit" class="btn btn-secondary zipbtn" value="FIND">                                      
                                   </span>
                                </div>
                         </div>
