@@ -41,7 +41,7 @@ class User extends Front_Controller_without_login {
                 $this->viewData['is_invitation']=false;
                 $this->viewData['user_type']=SHOP_OWNER;
             }
-            $this->viewData['is_activation_pending']=$_SESSION['ACTIVATION_PENDING'] ? $_SESSION['ACTIVATION_PENDING'] : FALSE;
+          // $this->viewData['is_activation_pending']=$_SESSION['ACTIVATION_PENDING'] ? $_SESSION['ACTIVATION_PENDING'] : FALSE;
             $this->viewData['title'] = "Create Account";  
             $this->viewData['is_datatable'] =false;  
             $this->viewData['module'] = "front/register";
@@ -76,6 +76,13 @@ class User extends Front_Controller_without_login {
                     echo $this->lang->line("mendatory_fields");
             }else{        
              $checkEmail=$this->User->checkAdminEmailAvailable($this->input->post("vEmail")); 
+             
+              if($checkEmail==0){
+                $userData=$this->User->getUserDataByEmail($this->input->post("vEmail")); 
+                if(!empty($userData)){
+                   $checkEmail=1; 
+                }
+              }
                     if($checkEmail==1){
                             $postData=  $this->input->post();  
                            
@@ -99,7 +106,7 @@ class User extends Front_Controller_without_login {
                                 $postData['eStatus']=ACTIVE_STATUS;                                
                             }                           
                              
-                            $res = $this->User->insertRow($postData);                               
+                            $res = $this->User->insertRow($postData,'iUserId',$userData['iUserId']);                               
                           
                            if ($res>0) { 
                                $userdata = array(

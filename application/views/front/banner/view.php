@@ -1,8 +1,7 @@
 <div class="spacer-small"></div>
-<div class="container" style="margin-top: 100px !important;">
+      <div class="container" style="margin-top: 100px !important;">
             <div class="row ">
-               <div class="container" >
-                   
+               <div class="container" >                   
                   <div class="col-lg-12 banner-view-pic-container">
                      <div class="panel panel-default ">
                         <div class="panel-heading profile-small-title">

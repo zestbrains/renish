@@ -114,7 +114,7 @@ define("ADMIN_USER_TYPE", serialize(array('super_admin','admin','user')));
 define('ACTIVE_STATUS', 'Active');
 define('INACTIVE_STATUS', 'InActive');
 define('PROFILE_DP', 'dummy.png');
-define('BANNER_IMAGE_URL',DOMAIN_URL.'/assets/garage/1/6a6ed65ecd196863265b7b1d39f059a7.jpg');
+define('BANNER_IMAGE_URL',DOMAIN_URL.'/assets/files/manual/sticker.png');
 
 define('ADM_URL', 'admin/');
 define('ADM_CSS', 'themes/admin/css/');

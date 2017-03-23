@@ -17,7 +17,7 @@ class Setting_model extends Common_model
 		return $this->db->order_by('vCity', 'ASC')->get_where(TBL_CITY, array('eStatus' => 'Active', 'eDelete' => '0', 'iStateId' => $iStateId))->result_array();
 	}
         public function get_Discount() {
-		return $this->db->order_by('iPercentage', 'DESC')->get_where(TBL_DISCOUNTS, array('eStatus' => 'Active', 'eDelete' => '0'))->result_array();
+		return $this->db->order_by('iOrderBy', 'ASC')->get_where(TBL_DISCOUNTS, array('eStatus' => 'Active', 'eDelete' => '0'))->result_array();
 	}
         
         

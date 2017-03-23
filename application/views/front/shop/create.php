@@ -124,7 +124,7 @@
          <div class="row">
                 <div class="col-lg-12">
                         <div class="form-group">
-                          <label for="inputdefault"  class="profile-field-label">About Shop<span class="mendatory_mark">*</span></label>
+                          <label for="inputdefault"  class="profile-field-label">About Shop</label>
                           <textarea rows="3" id="tDescription" tabindex="4" name="tDescription" class="form-control profile-field" placeholder="Write About your Business" style="height:auto !important;"><?php echo (isset($GarageData['tDescription']) !='' ? $GarageData['tDescription'] : ''); ?></textarea>
                         </div>
                  </div>
@@ -335,12 +335,12 @@
                 <div class="panel-body">
                   <div class="checkbox">
 <!--                    <input type="checkbox" value="" id="coupon"   class="work-checkbox" checked>-->
-                      <label>I love to attract customers with offer of
+                      <label>My shop will offer
                         <select id="vCouponDiscount" name="vCouponDiscount" class="form-control2" style="border: none;border-bottom: 2px solid #CCC;" >
                              <?php foreach ($discouts as $discount) {$selected = ($GarageData['vCouponDiscount'] != '' ? ($discount['iDiscountId'] == $GarageData['vCouponDiscount']) ? 'selected="selected"' : '' : '');?>
                                <option value="<?php echo $discount['iDiscountId']; ?>" <?php echo $selected; ?>><?php echo $discount['iPercentage']; ?></option>
                             <?php }?>                        
-                          </select> discount on the final bill.</label>
+                          </select> percent discount to SureForLess.com customers.</label>
                   </div>
                     <input type="hidden" value="00" name="vAmountForCoupon"> 
                     <?php
@@ -394,6 +394,36 @@
                </div>
         </div>
 <!--- END ------>
+<!--- sticker suggestion page-->
+        <div id="sticker_suggestion" class="modal">
+               <div class="modal-content">
+                   <span class="close" id="close_modal">&times;</span>
+                 <div align="center">
+                     <h3>Congratulations!<span>You have successfully added your shop  with Sureforless.com!</span></h3>
+                        
+                      <span class="depend"><b>Get sureforless sticker for your shop.</b></span>  
+                      <div class="row">
+                          <form role="form" id="BannerPurchaseForm" method="post"  >
+                                    <div class="col-lg-6 border-right">                                    
+                                        <img src="<?php echo BANNER_IMAGE_URL; ?>">
+                                    </div>
+                                    <div class="col-lg-6"> 
+                                       Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <a href="<?php echo DOMAIN_URL; ?>" id="confirm_mobile_num" class="btn btn-lg btn-default read-more model-btn">Not now</a>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <a href="<?php echo DOMAIN_URL.'/banner/view'; ?>" id="confirm_mobile_num" class="btn btn-lg btn-default read-more model-btn">its one step ahead</a>
+                                    </div>
+                          </form>
+                      </div>
+                        
+                 </div> 
+                   
+               </div>
+        </div>
+<!--- END ------>
 <style>
     .mendatory_mark{color:red;}
 </style>
@@ -401,6 +431,8 @@
 <script src="<?php echo ASSETS_URL; ?>/js/jquery-clockpicker.min.js" type="text/javascript"></script>     
     
  <script type="text/javascript">
+      
+                            
   //add Hyphen in mobile number
  $('#vMobile').keyup(function(){
     $(this).val($(this).val().replace(/(\d{3})\-?(\d{3})\-?(\d{4})/,'$1-$2-$3'));         
@@ -477,7 +509,7 @@ $(function(){
            
        });
        $("#third_finished").click(function(){
-           if($('#vMobile').val()!='' && $('#vOffice_mobile').val()!='' && $('#vAddress').val()!='' && $('#tDescription').val()!='' && $('#iTotalMechanic').val()!=''){
+           if($('#vMobile').val()!='' && $('#vOffice_mobile').val()!='' && $('#vAddress').val()!=''  && $('#iTotalMechanic').val()!=''){
                 var regexp = /^\d+(-\d+)*$/;
                 if ($('#vMobile').val().search(regexp) == -1 || $('#vMobile').val().length!=12 || $('#vOffice_mobile').val().length!=12  || $('#vOffice_mobile').val().search(regexp) == -1 )
                 {                    
@@ -601,14 +633,16 @@ $(function(){
                        $("#loading-image").show();
                     },
                     success: function (data) {
-                        console.log(data);
+                     //   console.log(data);
                        if(data=='successfully!!'){
                             $("#msg").show();
                             $("#msg").removeClass('error_alert_bar');
                             $("#msg").addClass('success_alert_bar');
                             $("#msg").html(data);
                             $("#loading-image").hide();
-                            window.location.href = '<?php echo DOMAIN_URL;?>';
+                            var modal = document.getElementById('sticker_suggestion'); 
+                            modal.style.display = "block";
+                            
                         }else{
                             $("#msg").show();
                             $("#msg").removeClass('success_alert_bar');

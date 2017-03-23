@@ -1,14 +1,14 @@
 <div class="spacer-small"></div>
 <div class="container" style="margin-top: 100px !important;">
   <div class="row">
-    <?php if($is_activation_pending){ ?>
-    <div class="col-xs-12 col-sm-5 col-md-5 col-lg-5 col-sm-offset-1" id="activationForm" >
+   
+   <div class="col-xs-12 col-sm-5 col-md-5 col-lg-5 col-sm-offset-1" id="activationForm" style="display: none;" >
       <form role="form" id="activation_form" method="post">
         <div class="row">
           <div class="col-xs-12 col-sm-12 col-md-12 title-hading" style="text-align:center;"> <img src="<?php echo ASSETS_URL; ?>/manual/email.png"/>
-            <h3>Check your email<br>
-              Activate Your account here..</h3>
-            <p>We sent you varification code into your register email address.</p>
+              <h3>Check Your Email</h3>
+              <span class="depend" ><b id="activation_email"></b></span>
+            <p>We emailed you activation code.</p>
           </div>
         </div>
         <div id="msg" class="error"></div>
@@ -27,8 +27,8 @@
           </div>
         </div>
       </form>
-    </div>
-    <?php }else{ ?>
+  </div>
+  
     <div class="col-xs-12 col-sm-5 col-md-5 col-lg-5 customer-login-form col-sm-offset-1" id="registrationForm">
       <form role="form" id="RegisterForm" method="post">
         <input type="hidden" name="eUserRole" value="<?php echo $user_type; ?>" >
@@ -82,7 +82,7 @@
         </div>
       </form>
     </div>
-    <?php } ?>
+    
     <?php if($is_invitation){ ?>
     <div class="col-sm-4 col-md-4 col-lg-4 col-xs-12 invite-friends col-sm-offset-1">
       <div class="row">
@@ -201,6 +201,7 @@
                 var redirect_url='<?php echo DOMAIN_URL.'/'.$last_page; ?>';             
                 var FormData=$('form#RegisterForm').serialize();
                 var user_type='<?php echo $user_type; ?>';
+                var user_email=$("#vEmail").val();
                  $.ajax({
                     type: "POST",
                     url: '<?php echo DOMAIN_URL; ?>/user/Registration',
@@ -212,13 +213,15 @@
                         console.log(data);
                         if(data=='Registration successfully.'){
                             if(user_type=='<?php echo VEHICLE_OWNER; ?>'){
-                                var modal = document.getElementById('Confirm_customer_registration'); 
+                                 var modal = document.getElementById('Confirm_customer_registration'); 
                                  modal.style.display = "block";
                                  $("#loading-image").hide();
                                  $("#registration_completed").attr('href',redirect_url);
-                               // window.location.href=redirect_url;
                             }else{
-                               location.reload();
+                                $("input[type=submit]").removeAttr("disabled");
+                                $("#registrationForm").hide();
+                                $("#activation_email").append(user_email);
+                                $("#activationForm").show();
                             }
                             
                         }else{

@@ -170,6 +170,10 @@ class User_model extends Common_model
         else
             return '';
     }
+    function getUserDataByEmail($vEmail){
+              $result= $this->db->query('SELECT iUserId FROM '.TBL_USERS.' WHERE vEmail="'.$vEmail.'" AND eStatus="'.INACTIVE_STATUS.'" ',FALSE);
+              return $result->row_array();
+    }
 
 
     function checkOldPassword($iUserId,$vPassword)
