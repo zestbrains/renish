@@ -626,7 +626,7 @@ header {
 	z-index: 9999;
 	background: #ffffff;
 	transition: all 0.4s;
-	height: 75px;
+	height: 98px;
 	border-bottom: 2px solid #eee;
 }
 .page-boxed header {
@@ -859,9 +859,12 @@ nav#main-nav ul {
 nav#main-nav ul li {
 	display: inline-block;
 	margin: 0;
-	position: relative;
-	top: 10px;
+	position:relative;
+	top:14px;
 }
+nav#main-nav ul li.navlogo{
+	position:static !important;
+	}
 nav#main-nav > ul > li:first-child {
 	margin: 0;
 }
@@ -1880,7 +1883,7 @@ header.header-transparent.transparent-light:not(.mega-hover) {
 }
 header.header-transparent.transparent-light:not(.mega-hover) nav#main-nav > ul > li > a {
 	color: #333;
-	font-size: 13px !important;
+	font-size: 12px !important;
 	font-weight: 700 !important;
 	text-transform: uppercase !important;
 	padding: 0 16px !important;
@@ -6785,16 +6788,16 @@ header:not(.header-transparent) + #page-body .fullwidth-section.fullheight:first
 	display: inline-block;
 }
 .submenupar .submenu {
+	display:none;
 	position: absolute;
 	background: #fff;
 	border: 1px solid #ccc;
 	top: 40px !important;
 	padding: 5px 0;
-	opacity: 0;
 	right: -5px;
 }
 .submenupar:hover .submenu {
-	opacity: 1;
+	display:block;
 	transition: 0.5s all ease-in-out;
 }
 .submenupar .forhov {
@@ -7435,9 +7438,6 @@ img.homapimgg {
 }
 /*GG-18-3-17-END*/
 /*GG-20-3-17-FOR-TOP-MENU-N-POPUP*/
-#header .menu-inner {
-	height: 0;
-}
 #Confirm_customer_registration h3 {
 	color: #B5893C;
 	margin: 0;
@@ -7498,6 +7498,7 @@ img.homapimgg {
 	position: absolute;
 	right: 15px;
 	top: 8px;
+	z-index:10;
 }
 #registrationForm .form-group #password_main_show, #registrationForm .form-group #password_confirm_show{
 	font-size:12px;

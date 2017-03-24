@@ -21,15 +21,20 @@
         <div id="msg" class="error"></div>
 
         <div class="form-group">
-
-          <input type="text" name="email" id="display_name" class="form-control input-lg" placeholder="Email" tabindex="3">
-
+          <div class="input-group">
+            <span class="input-group-addon" id="basic-addon1"><i class="fa fa-user" aria-hidden="true"></i></span>
+            <input type="text" name="email" data-error-container="#email_error" id="display_name" class="form-control input-lg" placeholder="Email" tabindex="3">
+          </div>
+          <span id="email_error"></span>
         </div>
 
         <div class="form-group">
-
-          <input type="password" name="password" id="password" class="form-control input-lg" placeholder="Password" tabindex="4">
-          <a href="javascript:void(0);" id="password_show" >Show</a>  
+          <div class="input-group">
+            <span class="input-group-addon" id="basic-addon2"><i class="fa fa-lock" aria-hidden="true"></i></span>
+            <input type="password" name="password" data-error-container="#pass_error" id="password" class="form-control input-lg" placeholder="Password" tabindex="4">
+            <a href="javascript:void(0);" id="password_show" >Show</a>  
+          </div>
+          <span id="pass_error"></span>
         </div>
 
         <div class="form-group">
@@ -108,7 +113,7 @@ $(document).ready(function () {
 
                 email: {
 
-                    required: true
+                    required: true,email:true
 
                 },
 
@@ -139,7 +144,18 @@ $(document).ready(function () {
                 }
 
             },
+            errorPlacement: function (error, element) {
+                if (element.attr("type") == "radio") {
+                    error.appendTo('.a');
 
+              }else{
+                 if (element.attr("data-error-container")) {
+                    error.appendTo(element.attr("data-error-container"));
+                 } else {
+                    error.insertAfter(element);
+                 }
+              }
+            },
             submitHandler: function (form) { 
 
                 $("input[type=submit]").attr("disabled", "disabled");

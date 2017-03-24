@@ -103,9 +103,11 @@
    <script type="text/javascript" src="<?php echo ASSETS_URL; ?>/js/datatables.min.js"></script>
    <script src="<?php echo ASSETS_URL; ?>/css/bootstrap/bootstrap.min.js"></script>
     <script type="text/javascript">
+       <?php if($module!="front/support_list"){?>  
        $(document).ready(function() {
           $('#example').DataTable();
-       } );
+       });
+       <?php }?>
     </script>  
 <?php } ?>   
  

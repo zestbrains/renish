@@ -154,9 +154,9 @@ header #logo {
 	position: absolute;
 	left: 0;
 	top: 52%;
-	-webkit-transform: translate(0, -5%);
-	-ms-transform: translate(0, -5%);
-	transform: translate(0, -5%);
+	-webkit-transform: translate(0, -25%);
+	-ms-transform: translate(0, -25%);
+	transform: translate(0, -25%);
 	margin-top: 0;
 	padding: 0;
 }
@@ -383,7 +383,7 @@ nav#main-nav ul li.menu-item-has-children a {
 	width: auto !important;
 }
 nav#main-nav ul li ul > li a:hover, nav#main-nav ul li ul > li.current-menu-item > a {
-	color: #B5893C !important;
+	color: #000 !important;
 }
 nav#main-nav ul li > ul.submenu {
 	width: 140px !important;
@@ -406,12 +406,10 @@ nav#main-nav ul li > ul.submenu {
 	margin-top: 10px !important;
 }
 .profile-title h3 {
-	    font-size: 18px;
-    font-weight: 400 !important;
-    color: rgba(18, 18, 19, 0.69);
-    text-transform: capitalize;
-    line-height: 8px !important;
-    padding: 0px !important;
+	font-size: 18px;
+	line-height: 8px !important;
+	padding: 0px !important;
+	margin-top: 10px !important;
 }
 .profile-picture {
 	margin-bottom: 18px;
@@ -431,12 +429,9 @@ nav#main-nav ul li > ul.submenu {
 .profile-body {
 	padding: 0px !important;
 }
-.edit-profile-btn a{
+.edit-profile-btn {
+	text-align: center;
 	margin-bottom: 3px;
-	width: 150px;
-    background-color: #b5893c;
-    color: white;
-	text-transform: uppercase;
 }
 .panel-default>.panel-heading {
 	background-color: rgba(245, 245, 245, 0.12) !important;
@@ -1429,9 +1424,8 @@ header .header-inner {
 }
 .searchbox-inside h4 {
 	color: white;
-	font-size: 24px;
+	font-size: 29px;
 	padding-bottom: 12px;
-	text-align:center;
 }
 .success_alert_bar {
 	background-color: rgb(141, 202, 70) !important;
@@ -1478,11 +1472,11 @@ header .header-inner {
 #show-search i {
 	font-size: 20px !important;
 	font-weight: bold !important;
-	color: #4CAF50 !important;
+	color: #FF5722 !important;
 }
 #show-search i span {
 	font-weight: bold !important;
-	color: #4CAF50 !important;
+	color: #FF5722 !important;
 }
 footer .copyright {
 	padding: 5px 0 !important;
@@ -1830,10 +1824,11 @@ nav#main-nav ul > li {
 	padding-right: 27px;
 }
 #light-logo {
-	height: 100px;
-	width: 100px;
+	 -ms-interpolation-mode: bicubic;
+	height: 125px;
+	width: 125px;
 	position: relative;
-	bottom: 44px;
+	margin-top:-36px;
 	z-index: 9999;
 }
 .logo_menu {
@@ -2195,8 +2190,371 @@ nav#main-nav > ul > li.navlogo::after {
 .seventh-step-garage .btn-garage #save_shop {
 	float: right;
 }
+/*GG-19-3-17*/
+.support-parent {
+	margin-top: 135px;
+	margin-bottom: 55px;
+}
+.support-parent h1 {
+	font-size: 40px;
+	text-align: center;
+	text-transform: uppercase;
+	color: #B5893C;
+}
+.support-parent .support-inner {
+	max-width: 500px;
+	margin: 0 auto;
+	background: #f8f8f8;
+	padding: 8px 20px;
+	padding-top: 12px;
+	border-radius: 10px;
+	border-bottom: 3px solid #CCC;
+}
+.support-parent .sup-item.for-title input[type="text"] {
+	height: 30px;
+	padding-top: 0;
+	padding-bottom: 0;
+	line-height: 28px;
+	padding: 0 5px !important;
+}
+.support-parent .sup-item input[type="text"], .support-parent .sup-item textarea {
+	border: 1px solid #ccc;
+	width: 100%;
+	border: 2px solid #e2dfdf;
+	background-color: #fff;
+	border-radius: 6px;
+}
+.support-parent .sup-item textarea {
+	height: 120px;
+}
+.support-parent .sup-item.for-file, .support-parent .sup-item.for-prior {
+	float: left;
+	width: 50%;
+}
+.support-parent .sup-item {
+	margin-bottom: 15px;
+}
+.support-parent .sup-item.for-prior select {
+	width: 100%;
+	height: 30px;
+	padding-left: 5px;
+	border: 2px solid #e2dfdf;
+	border-radius: 6px;
+}
+.support-parent .sup-item.for-submit input[type="submit"] {
+	background: #B5893C;
+	border: 0;
+	height: 40px;
+	line-height: 40px;
+	padding: 0;
+	width: 140px;
+	text-align: center;
+	color: #fff;
+	font-size: 18px;
+	margin-top: 20px;
+	border-radius: 5px;
+}
+.support-parent .sup-item .sup-label {
+	margin-bottom: 2px;
+}
+/*GG-19-3-17-END*/
+
 /*MP 23-03-2017*/
 .btn-default:hover {
     color: #fff !important;
     background-color: #b5893c !important;
 }
+
+/*MP 24-03-2017*/
+#myModal .btn.btn-lg.btn-default.read-more.model-btn:hover
+{
+	border-color: #b5893c !important;
+}
+#myModal .btn-default.active, .btn-default:active, .open>.dropdown-toggle.btn-default
+{
+	    color: #fff !important;
+    background-color: #b5893c !important;
+    border-color: #8e6a2b !important;
+}
+
+/*GG-20-3-17*/
+.supportlist-parent {
+	margin-top: 135px;
+	margin-bottom: 110px;
+}
+.supportlist-parent h1 {
+	font-size: 40px;
+	text-align: center;
+	text-transform: uppercase;
+	color: #B5893C;
+}
+.supportlist-parent .supportlist-table {
+	max-width: 1000px;
+	margin: 0 auto;
+	margin-top: 20px;
+	position: relative;
+}
+.supportlist-parent #supportlist_info, .supportlist-parent #supportlist_paginate {
+	float: left;
+	width: 50%;
+}
+.supportlist-parent #supportlist_paginate {
+	text-align: right;
+}
+.supportlist-parent #supportlist_paginate * {
+	margin: 0;
+	margin-left: 10px;
+}
+.supportlist-parent #supportlist_paginate .paginate_button.current {
+	padding: 6px;
+	background: white;
+	color: black;
+	margin-left: 3px;
+	margin-right: 3px;
+	padding-left: 10px;
+	border: 1px solid #CCC;
+	padding-right: 10px;
+	border-radius: 5px;
+}
+.supportlist-parent #supportlist .sorting_asc, .supportlist-parent #supportlist .sorting_desc, .supportlist-parent #supportlist .sorting {
+	font-size: 18px;
+}
+.supportlist-parent #supportlist td {
+	padding: 10px !important;
+	text-align: left;
+}
+.supportlist-parent #supportlist th {
+	text-align: left;
+}
+.supportlist-parent #supportlist_length *, .supportlist-parent #supportlist_filter * {
+	font-weight: normal;
+	text-transform: uppercase;
+	font-size: 14px;
+}
+.supportlist-parent .addticket {
+	position: absolute;
+	right: 0;
+	background: #B5893C;
+	color: #fff;
+	padding: 5px 10px;
+	top: -80px;
+	border-radius: 5px;
+}
+/*GG-20-3-17-END*/
+/*GG-23-3-17-SUPPORT-LIST-CHANGES*/
+#supportlist tbody tr:hover {
+	box-shadow: 0 0 10px -5px #000;
+	transition: none;
+}
+#supportlist tbody tr td .prioriti::before {
+	content: "";
+	height: 12px;
+	width: 12px;
+	display: inline-block;
+	margin-right: 5px;
+	border-radius: 2px;
+}
+#supportlist tbody tr td .prioriti.high::before {
+	background: #f00;
+}
+#supportlist tbody tr td .prioriti.medium::before {
+	background: #ff0;
+}
+#supportlist tbody tr td .prioriti.low::before {
+	background: #0f0;
+}
+#supportlist thead th {
+	position: relative;
+}
+#supportlist thead th.sorting::after, #supportlist thead th.sorting_asc::after {
+	content: '\2191';
+	position: absolute;
+	right: 10px;
+	top: 5px;
+}
+#supportlist thead th.sorting_desc::after {
+	content: '\2193';
+	position: absolute;
+	right: 10px;
+	top: 5px;
+}
+/*GG-23-3-17-SUPPORT-LIST-CHANGES-END*/
+/*GG-23-3-17-SUPPORT-DETAIL*/
+.supportdetail-parent {
+	margin-top: 135px;
+	margin-bottom: 110px;
+}
+.supportdetail-parent h1 {
+	font-size: 40px;
+	text-align: center;
+	text-transform: uppercase;
+	color: #B5893C;
+}
+.supportdetail-parent .supportdetail-inner {
+	max-width: 1000px;
+	margin: 0 auto;
+}
+.supportdetail-parent .supportdetail-inner .spdetleft, .supportdetail-parent .supportdetail-inner .spdetright {
+	width: 48%;
+	background: #f8f8f8;
+	border-radius: 10px;
+	border-bottom: 3px solid #CCC;
+}
+.supportdetail-parent .supportdetail-inner .spdetleft {
+	float: left;
+	margin-right: 2%;
+	padding: 15px 25px;
+}
+.supportdetail-parent .supportdetail-inner .spdetright {
+	float: right;
+	margin-left: 2%;
+	padding: 0;
+}
+.supportdetail-parent .supportdetail-inner .sdhead {
+	font-weight: bold !important;
+	line-height: initial;
+}
+.supportdetail-parent .supportdetail-inner .sdcont {
+	margin-bottom: 12px;
+}
+/*FOR-CHAT*/
+.supportdetail-parent .chatinner .panel-footer {
+	padding:10px;
+	border-bottom-right-radius: 5px;
+	border-bottom-left-radius: 5px;
+}
+.supportdetail-parent .chatinner .col-md-2, .supportdetail-parent .chatinner .col-md-10 {
+	padding: 0;
+}
+.supportdetail-parent .chatinner .panel {
+	margin-bottom: 0px;
+}
+.supportdetail-parent .chatinner .chat-window {
+	width: 100%;
+	padding: 0;
+}
+.supportdetail-parent .chatinner .chat-window .col-xs-12.col-md-12 {
+	padding: 0;
+}
+.supportdetail-parent .chatinner .chat-window > div > .panel {
+	border-radius: 5px;
+}
+.supportdetail-parent .chatinner .icon_minim {
+	padding: 2px 10px;
+}
+.supportdetail-parent .chatinner .msg_container_base {
+	background: #e5e5e5;
+	margin: 0;
+	padding: 0 10px 10px;
+	max-height: 300px;
+	overflow-x: hidden;
+}
+.supportdetail-parent .chatinner .top-bar {
+	background: #666;
+	color: white;
+	padding: 10px;
+	position: relative;
+	overflow: hidden;
+}
+.supportdetail-parent .chatinner .msg_receive {
+	padding-left: 0;
+	margin-left: 0;
+}
+.supportdetail-parent .chatinner .msg_sent {
+	padding-bottom: 26px !important;
+	margin-right: 0;
+}
+.supportdetail-parent .chatinner .messages {
+	background: white;
+	padding: 10px;
+	border-radius: 2px;
+	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+	max-width: 100%;
+}
+.supportdetail-parent .chatinner .messages > p {
+	font-size: 13px;
+	margin: 0 0 0.2rem 0;
+}
+.supportdetail-parent .chatinner .messages > time {
+	font-size: 11px;
+	color: #ccc;
+}
+.supportdetail-parent .chatinner .msg_container {
+	padding: 10px;
+	overflow: hidden;
+	display: flex;
+}
+.supportdetail-parent .chatinner img {
+	display: block;
+	width: 100%;
+}
+.supportdetail-parent .chatinner .avatar {
+	position: relative;
+}
+.supportdetail-parent .chatinner .base_receive > .avatar:after {
+	content: "";
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 0;
+	height: 0;
+	border: 5px solid #FFF;
+	border-left-color: rgba(0, 0, 0, 0);
+	border-bottom-color: rgba(0, 0, 0, 0);
+}
+.supportdetail-parent .chatinner .base_sent {
+	justify-content: flex-end;
+	align-items: flex-end;
+}
+.supportdetail-parent .chatinner .base_sent > .avatar:after {
+	content: "";
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 0;
+	height: 0;
+	border: 5px solid white;
+	border-right-color: transparent;
+	border-top-color: transparent;
+	box-shadow: 1px 1px 2px rgba(black, 0.2);
+}
+.supportdetail-parent .chatinner .msg_sent > time {
+	float: right;
+}
+ .supportdetail-parent .chatinner .msg_container_base::-webkit-scrollbar-track {
+ -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+ background-color: #F5F5F5;
+}
+ .supportdetail-parent .chatinner .msg_container_base::-webkit-scrollbar {
+ width: 12px;
+ background-color: #F5F5F5;
+}
+ .supportdetail-parent .chatinner .msg_container_base::-webkit-scrollbar-thumb {
+ -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+ background-color: #555;
+}
+.supportdetail-parent .chatinner .btn-group.dropup {
+	position: fixed;
+	left: 0px;
+	bottom: 0;
+}
+.supportdetail-parent .chatinner #btn-chat {
+	font-size: 16px;
+	padding: 0 20px;
+	height: 44px;
+}
+/*GG-23-3-17-SUPPORT-DETAIL-END*/
+/*GG-24-3-17-FOR-CHANGES*/
+.submenupar .submenu li:hover{
+	background:#B5893C;
+	}
+#LoginForm .input-group-addon{
+	background: #fff;
+border: 2px solid #e2dfdf;
+font-size:18px;
+	}
+#LoginForm .input-group .form-control{
+	border-left:0;
+	padding-left:10px;
+	}
+/*GG-24-3-17-FOR-CHANGES-END*/

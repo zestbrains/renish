@@ -119,7 +119,7 @@ if (!function_exists('sendVerificationCode')) {
 		         </tr>
 		         <tr>
 		            <td align='left' valign='top'><p>Please access your account at SUREFORLESS to explore more </p><a href='".$link."' style=' color: #fff; text-decoration: none;display:block;    background-color: #b5893c;width: 200px;text-align: center;padding: 10px;' target='_blank'><strong>Confirm Your Account</strong></a> 
-		            <p>with verification code :<font style='color: #b5893c;'><strong>". $code ."</strong></font></p></td>
+		            <p>with verification code :<font style='color: #b5893c;font-size: 16px;'><strong>". $code ."</strong></font></p></td>
 		         </tr>
 		      </table>
 		      <table width='70%' align='center' style='background-color:#F4F4F4; padding:20px;border-bottom:5px solid #B28324; border-top:1px solid #E0E0E0; '>
@@ -132,15 +132,15 @@ if (!function_exists('sendVerificationCode')) {
 		   </body>
 		</html>";
 
-		// Always set content-type when sending HTML email
-		$headers = "MIME-Version: 1.0" . "\r\n";
-		$headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
-		// More headers
-
-		$headers .= 'From: "Sureforless" <noreply@sureforless.com>' . "\r\n";
-		if (@mail($to, $subject, $message, $headers)) {
-    		return true;
-		}		
+		$CI = &get_instance();
+		$CI->load->model('admin/Admin');
+        $CI->Admin->siteSettings();
+        // echo "a";exit;
+        if(sendEmailAddress($to, $subject, $message,'noreply@sureforless.com')){
+        	return true;
+        }else{
+        	return false;
+        }		
 	}
 }
 
@@ -151,11 +151,10 @@ if (!function_exists('sendEmailAddress')) {
 		$CI->load->library('email');
 		$CI->email->initialize(array(
 			'protocol' => 'smtp',
-			'smtp_host' => 'smtp.googlemail.com',
-			'smtp_user' => 'zestbrainsinfotech@gmail.com',
-			'smtp_pass' => 'company2016',
-			'smtp_port' => 465,
-			'smtp_crypto' => 'ssl',
+			'smtp_host' => 'localhost',
+			'smtp_user' => 'noreply@sureforless.com',
+			'smtp_pass' => 'UWc-lUVoBvf7',
+			'smtp_port' => 2525,
 			'crlf' => "\r\n",
 			'newline' => "\r\n",
 			'mailtype' => "html",
@@ -169,7 +168,7 @@ if (!function_exists('sendEmailAddress')) {
 		if ($CI->email->send()) {
 			return true;
 		} else {
-			show_error($CI->email->print_debugger());
+			//echo show_error($CI->email->print_debugger());
 			return false;
 		}
 

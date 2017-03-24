@@ -304,20 +304,5 @@ $(document).ready(function() {
   });
 
 });              
-function myMap() {
-var mapProp= {
-    center:new google.maps.LatLng(40.7128,74.0059),
-    zoom:5,
-    scrollwheel: false,
-    zoomControl: false,
-  mapTypeControl: false,
-  scaleControl: false,
-  streetViewControl: false,
-  rotateControl: false,
-  fullscreenControl: false
-};
-var map=new google.maps.Map(document.getElementById("map"),mapProp);
-}
-</script>
 
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAQG7ZCYf4HIK3L2znRJowB8LI-Vw--Hrk&callback=myMap"></script>
+</script>
