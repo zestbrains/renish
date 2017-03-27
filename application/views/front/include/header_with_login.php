@@ -31,33 +31,34 @@
 
             <li><a id="body_shop" href="<?php echo DOMAIN_URL; ?>/home/about_us">How it works</a></li>
             <li><a id="body_shop" href="javascript:void(0);">REFER FOR CREDIT</a></li>
-            <?php if($_SESSION['USER_TYPE']!=SHOP_OWNER){ ?>
+           
+             <?php if($_SESSION['USER_TYPE']==VEHICLE_OWNER || ($_SESSION['USER_TYPE']==SHOP_OWNER && $_SESSION['ACTIVATION_PENDING']==TRUE)){ ?>
             <li><a id="body_shop" href="<?php echo DOMAIN_URL; ?>/user/register/shop">Register shop</a></li>
             <?php }else{ ?>
             <li><a id="body_shop" href="#">Promote Bussiness</a></li>
             <?php } ?>
+            
             <li class="menu-item-has-children">
-              <?php if($_SESSION['USER_TYPE']==SHOP_OWNER){ ?>
-              <div class="submenupar"> <a href="javascript:void(0);" class="forhov"> <img src=" <?php echo $_SESSION['USERIMAGE'] ? $_SESSION['USERIMAGE']:'';  ?> " class="top-header-image"> <?php echo $_SESSION['USERNAME'] ? $_SESSION['USERNAME']:'Welcome Guest';  ?> <i class="ion ion-ios-arrow-down"></i> </a>
-                <ul class="submenu">
-                  <li><a href="<?php echo DOMAIN_URL; ?>/user/edit_profile">View Profile</a></li>
-                  <?php if($_SESSION['ACTIVATION_PENDING']==FALSE){ ?>
-                  <li><a href="<?php echo DOMAIN_URL; ?>/shop/create">Your Shop</a></li>
-                  <li><a href="<?php echo DOMAIN_URL; ?>/user/order_history">Your orders</a></li>
-                  <li><a href="<?php echo DOMAIN_URL; ?>/user/sell_history">Your selling</a></li>
-                  <?php } ?>
-                  <li><a href="<?php echo DOMAIN_URL; ?>/user/logout">Logout</a></li>
-                </ul>
-              </div>
-              <?php }else{ ?>
-              <div class="submenupar"> <a href="javascript:void(0);" class="forhov"> <img src=" <?php echo $_SESSION['USERIMAGE'] ? $_SESSION['USERIMAGE']:'';  ?> " class="top-header-image"> <?php echo $_SESSION['USERNAME'] ? $_SESSION['USERNAME']:'Welcome Guest';  ?> <i class="ion ion-ios-arrow-down"> </i> </a>
-                <ul class="submenu">
-                  <li><a href="<?php echo DOMAIN_URL; ?>/user/edit_profile">View Profile</a></li>
-                  <li><a href="<?php echo DOMAIN_URL; ?>/user/order_history">Your orders</a></li>
-                  <li><a href="<?php echo DOMAIN_URL; ?>/user/logout">Logout</a></li>
-                </ul>
-              </div>
-              <a href="#" id="show-search"> <i class="fa fa-usd"> <span> <?php echo $_SESSION['USERWALLET'] ? $_SESSION['USERWALLET']:0;  ?> </span> </i> </a>
+              <?php if($_SESSION['USER_TYPE']==SHOP_OWNER && $_SESSION['ACTIVATION_PENDING']==FALSE){ ?>
+                    <div class="submenupar"> <a href="javascript:void(0);" class="forhov"> <img src=" <?php echo $_SESSION['USERIMAGE'] ? $_SESSION['USERIMAGE']:'';  ?> " class="top-header-image"> <?php echo $_SESSION['USERNAME'] ? $_SESSION['USERNAME']:'Welcome Guest';  ?> <i class="ion ion-ios-arrow-down"></i> </a>
+                      <ul class="submenu">
+                        <li><a href="<?php echo DOMAIN_URL; ?>/user/edit_profile">View Profile</a></li>
+                        <li><a href="<?php echo DOMAIN_URL; ?>/shop/create">Your Shop</a></li>
+                        <li><a href="<?php echo DOMAIN_URL; ?>/user/order_history">Your orders</a></li>
+                        <li><a href="<?php echo DOMAIN_URL; ?>/user/sell_history">Your selling</a></li>
+                       
+                        <li><a href="<?php echo DOMAIN_URL; ?>/user/logout">Logout</a></li>
+                      </ul>
+                    </div>
+              <?php }else if($_SESSION['USER_TYPE']==VEHICLE_OWNER){ ?>
+                    <div class="submenupar"> <a href="javascript:void(0);" class="forhov"> <img src=" <?php echo $_SESSION['USERIMAGE'] ? $_SESSION['USERIMAGE']:'';  ?> " class="top-header-image"> <?php echo $_SESSION['USERNAME'] ? $_SESSION['USERNAME']:'Welcome Guest';  ?> <i class="ion ion-ios-arrow-down"> </i> </a>
+                      <ul class="submenu">
+                        <li><a href="<?php echo DOMAIN_URL; ?>/user/edit_profile">View Profile</a></li>
+                        <li><a href="<?php echo DOMAIN_URL; ?>/user/order_history">Your orders</a></li>
+                        <li><a href="<?php echo DOMAIN_URL; ?>/user/logout">Logout</a></li>
+                      </ul>
+                    </div>
+                    <a href="#" id="show-search"> <i class="fa fa-usd"> <span> <?php echo $_SESSION['USERWALLET'] ? $_SESSION['USERWALLET']:0;  ?> </span> </i> </a>
               <?php } ?>
             </li>
           </ul>

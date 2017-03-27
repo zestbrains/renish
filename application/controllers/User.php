@@ -26,20 +26,20 @@ class User extends Front_Controller_without_login {
     {
         //echo $IsPageType; exit;  
     
-      if($_SESSION['USERID']=='' || $_SESSION['ACTIVATION_PENDING']==TRUE || $_SESSION['USER_TYPE']==VEHICLE_OWNER){             
+      if($_SESSION['USERID']=='' || $_SESSION['USER_TYPE']==VEHICLE_OWNER || ($_SESSION['USER_TYPE']==SHOP_OWNER && $_SESSION['ACTIVATION_PENDING']==TRUE)){             
             if($IsPageType=='vehicle'){
                 $this->viewData['last_page']='home';
                 $this->viewData['heading']=VEHICLE_HEADING;
                 $this->viewData['semi_heading']=VEHICLE_SEMI_HEADING;
+                $this->viewData['user_type']=VEHICLE_OWNER;                
                 $this->viewData['is_invitation']=true;
-                $this->viewData['user_type']=VEHICLE_OWNER;
                 
             }elseif($IsPageType=='shop'){
                 $this->viewData['last_page']='shop/create';
                 $this->viewData['heading']=SHOP_HEADING;
                 $this->viewData['semi_heading']=SHOP_SEMI_HEADING;
+                $this->viewData['user_type']=SHOP_OWNER;                
                 $this->viewData['is_invitation']=false;
-                $this->viewData['user_type']=SHOP_OWNER;
             }
           // $this->viewData['is_activation_pending']=$_SESSION['ACTIVATION_PENDING'] ? $_SESSION['ACTIVATION_PENDING'] : FALSE;
             $this->viewData['title'] = "Create Account";  
@@ -120,8 +120,7 @@ class User extends Front_Controller_without_login {
                                 );
                                
                                 if($postData['eUserRole']==SHOP_OWNER){
-                                      $redirect_mail_url= DOMAIN_URL.'/'.'user/redirect_to_varify?vActivationToken='.$postData['vActivationToken'];
-                
+                                      $redirect_mail_url= DOMAIN_URL.'/'.'user/redirect_to_varify?vActivationToken='.$postData['vActivationToken'];                
                                       sendVerificationCode($postData['vEmail'],$postData['vActivationToken'],DOMAIN_URL.'/'.'user/redirect_to_varify/'.$redirect_mail_url);
                                       
                                       $userdata['USERLOGIN']=FALSE;
@@ -132,19 +131,20 @@ class User extends Front_Controller_without_login {
                                       $userdata['ACTIVATION_PENDING']=FALSE;                                      
                                 } 
                                $this->session->set_userdata($userdata);
-                               echo $this->lang->line("res_succ");
-                           } else {                       
-                               echo $this->lang->line("err_login");  
+                               $data=array('success'=>1,'message'=>'Registration successfully.','vActivationToken'=>$postData['vActivationToken'],'redirect_mail_url'=>DOMAIN_URL.'/'.'user/redirect_to_varify/'.$redirect_mail_url);
+                               
+                           } else {  
+                               $data=array('success'=>0,'message'=>$this->lang->line("err_login"));
                            }
                     }else{
-                         echo $this->lang->line("err_email_already_exists");                   
+                         $data=array('success'=>0,'message'=>$this->lang->line("err_email_already_exists"));
                     }
             }
-       
+        echo json_encode($data);
         exit;
         
     }
-    protected function FourDegitCode() {
+     protected function FourDegitCode() {
         $alphabet = '1234567890';
         $pass = array(); //remember to declare $pass as an array
         $alphaLength = strlen($alphabet) - 1; //put the length -1 in cache
@@ -153,6 +153,11 @@ class User extends Front_Controller_without_login {
             $pass[] = $alphabet[$n];
         }
         return implode($pass); //turn the array into a string
+     }
+     function resend_activation_code(){
+         $postData=  $this->input->post();
+         sendVerificationCode($postData['email'],$postData['activation_code'],$postData['redirect_mail_url']);
+         echo 1; exit;
      }
      function redirect_to_varify(){
         

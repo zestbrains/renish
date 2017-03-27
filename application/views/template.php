@@ -29,44 +29,12 @@
       <!-- <title>Repair Surity</title> -->
 
   <title>Sure For Less - Trusted Auto Shops</title>
-    <!-- TWITTER FOLLOW -->
-    
-    <?php if($module == 'front/home'){?>
-    <script>window.twttr = (function(d, s, id) {
-    var js, fjs = d.getElementsByTagName(s)[0],
-    t = window.twttr || {};
-    if (d.getElementById(id)) return t;
-    js = d.createElement(s);
-    js.id = id;
-    js.src = "https://platform.twitter.com/widgets.js";
-    fjs.parentNode.insertBefore(js, fjs);
-    t._e = [];
-    t.ready = function(f) {
-      t._e.push(f);
-    };
-    return t;
-    }(document, "script", "twitter-wjs"));</script>
-    <?php }?>
-
-    <!-- TWITTER FOLLOW -->
+  
     </head>
     <!-- END HEAD -->
     <!-- BEGIN BODY -->
 <body>
-    
-    <!-- FACEBOOK LIKE -->
-    <?php if($module == 'front/home'){?>
-    <div id="fb-root"></div>
-    <script>(function(d, s, id) {
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) return;
-        js = d.createElement(s); js.id = id;
-        js.src = "https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.8&appId=253879668395910";
-        fjs.parentNode.insertBefore(js, fjs);
-      }(document, 'script', 'facebook-jssdk'));
-    </script>
-    <?php }?>
-    <!-- FACEBOOK LIKE -->
+  
 <!--       <div id="page-loader">
          <div class="page-loader-inner"> 
              <span class="loader-figure"></span> 
