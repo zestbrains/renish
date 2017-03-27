@@ -2343,8 +2343,15 @@ nav#main-nav > ul > li.navlogo::after {
 /*GG-20-3-17-END*/
 /*GG-23-3-17-SUPPORT-LIST-CHANGES*/
 #supportlist tbody tr:hover {
-	box-shadow: 0 0 10px -5px #000;
-	transition: none;
+	cursor: pointer;
+}
+#supportlist tbody tr:hover td {
+	background-color: rgba(0,0,0,0.07);
+	transition: all 0.5s ease-in;
+	-webkit-transition: all 0.5s ease-in;
+	-moz-transition: all 0.5s ease-in;
+	-o-transition: all 0.5s ease-in;
+	-ms-transition: all 0.5s ease-in;
 }
 #supportlist tbody tr td .prioriti::before {
 	content: "";
