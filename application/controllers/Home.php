@@ -8,16 +8,8 @@ class Home extends Front_Controller_without_login {
 	
    function index()
     {
-      
         $this->viewData['title'] = lang("HOME_PAGE_TITLE");  
-       $this->viewData['module'] = "front/home";
-       
-        $this->viewData['is_datatable'] =false;  
-        $this->load->view('template', $this->viewData);
-    }
-	function blog()
-    {   $this->viewData['title'] = lang("HOME_PAGE_TITLE");  
-        $this->viewData['module'] = "front/blog";
+        $this->viewData['module'] = "front/home";
         $this->viewData['is_datatable'] =false;  
         $this->load->view('template', $this->viewData);
     }
